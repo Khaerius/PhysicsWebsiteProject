@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Projekt 1</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="script.js"></script>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<header class="head1" width="1900" height="500">
+		Fizyka - Drgania, ruch harmoniczny i fale.
+			
+	</header>
+	<div class="source">
+			Źródło: tapeciarnia.pl
+	</div>
+	<nav>
+		<ul>
+			<li onclick="navigate('teoria');">Teoria</li>
+			<li onclick="navigate('oscill');">Ruch harmoniczny</li>
+			<li onclick="navigate('waves');">Rodzaje fal</li>
+			<li onclick="navigate('interference');">Interferencja</li>
+			<li onclick="navigate('wykres');">Wykresy drgań</li>
+		</ul>
+	</nav>
+	<article id="teoria">
+		<h1 class="head2">Teoria i definicje</h1>
+		Strona ma na celu przybliżyć fizyczne zjawisko ruchu harmonicznego oraz fali. W tym celu należy rozpocząć od następujących definicji:<br><br>
+		<b>Drganiami</b>, ogólnie nazywamy zbiór procesów, w trakcie których wielkości fizyczne na przemian rosną lub maleją w czasie. Ponieważ zaprezentujemmy zjawisko <b>fali</b>, najistotniejsze będą tzw. <b>drgania mechaniczne</b>.<br><br>
+		<b>Drgania mechaniczne</b> to rodzaj drgań, w których zmienia się położenie konkretnego obiektu, może to być zarówno wahadło matematyczne, masa na sprężynie, ale także cząsteczki np. wody, lub powietrza.<br><br>
+		<b>Falą</b> nazywamy zaburzenie rozprzestrzeniające się w ośrodku lub przestrzeni. Cząstki ośrodka drgają wokół położeń równowagi. Jeśli znajdujemy się w ośrodku sprężystym rozprzestrzenianie się drgań cząsteczek tego ośrodka nazywane jest <b>falą mechaniczną</b>. Charakterystyczny jest fakt, że przenosząc energię, fala nie przenosi żadnej masy.<br><br>
+		Jednak przeczytać to nie to samo co zobaczyć. Czas zaprezentować te zjawiska fizyczne.
+		<div class="source">
+			Źródło: wikipedia.org
+		</div>
+	</article>
+	<div id="oscill">
+		<h1 class="head2">Oscylacje cząstki</h1>
+		Jak mogliśmy przeczytać w definicji, do wystąpienia zjawiska zwanego falą mechaniczną niezbędne jest wystąpienie drgań cząstek ośrodka sprężystego. Poniższa animacja prezentuje oscylacje dla jednej cząstki.<br/>
+		<div>
+			<canvas id="oscylacja" width=600 height=200></canvas><script src="osc.js"></script>
+		</div>
+		Drgająca w ten sposób cząstka jest prostym przykładem oscylatora harmonicznego, czyli układu, który możemy opisać równaniem oscylatora harmonicznego:<br><br>
+		<img src="imgs/roh.svg"/><br><br>
+		Równanie to ma wiele rozwiązań, jednym z nich jest:<br><br>
+		<img src="imgs/rroh.svg"/><br><br>
+		które określa położenie obiektu w chwili czasowej t.<br><br>
+		Gdzie:<br>
+		<b>A</b> - amplituda(maksymalne wychylenie ciała z położenia równowagi);<br>
+		<b>&#966</b> - faza drgań;<br>
+		<b>&#969</b> - częstość kołowa(zależna od masy oraz sprężystości);<br>
+		<div class="source">
+			Źródło: wikipedia.org
+		</div>
+	</div>
+	<div id="waves">
+		<h1 class="head3">Rodzaje fal</h1>
+		Takie drgające cząstki, jak ta przedstawiona powyżej, mogą być cząstkami powietrza, lub wody. Jeśli takie zaburzenie oscylacji propaguje się w takim ośrodku w szerszej skali niosąc energię, powstaje fala mechaniczna. Wśród fal wyróżniamy wiele rodzajów, dotyczy ich także kilka ciekawych zagadnień.
+		<ul id="wavesThemes">
+			<li id="labelFala1" onclick="showTheme(1);">Fala Poprzeczna</li>
+			<li id="labelFala2" onclick="showTheme(2);">Fala Podłużna</li>
+			<li id="labelFala3" onclick="showTheme(3);">Fala Morska</li>
+			<li id="labelFala4" onclick="showTheme(4);">Fala Stojąca</li>
+			<li id="labelFala5" onclick="showTheme(5);">Fale Elektromagnetyczne</li>
+		</ul>
+		<div class="theme" id="fala1">
+			Fala poprzeczna - fala, w której kierunek drgań cząstek ośrodka jest prostopadły do kierunku rozchodzenia się fali. Posługując się przykładem naszej cząstki, fala w tej sytuacji rozchodziła by się w pionie, wzdłuż osi OY, ponieważ nasza cząstka drga wzdłuż osi OX. Przykładem tych fal są fale elektromagnetyczne. Ten rodzaj nie może rozchodzić się w cieczach, a jedynie w ciałach stałych. Kolejny przykład, to fala powstała na linie.
+			<div class="themeElem">
+				<img src="imgs/fala_pop.gif"/>
+			</div>
+			<div class="source">
+				Źródło: wikipedia.org
+			</div>
+		</div>
+		<div class="theme" id="fala2">
+			Fala podłużna - fala, w której kierunek drgań cząstek ośrodka jest równoległy do kierunku rozchodzenia się fali. W przykładzie naszej cząstki, fala propagowałaby się wzdłuż osi OX, czyli tak samo, jak kierunek drgań cząsteczki. Jest to typowa fala mechaniczna rozchodząca się w gazie, a zatem fala dźwiękowa, najpopularniejszy przykład fali podłużnej.
+			<div class="themeElem">
+				<img src="imgs/fala_podl.gif" width="366" height="277" />
+			</div>
+			<div class="source">
+				Źródło: wikipedia.org
+			</div>
+		</div>
+		<div class="theme" id="fala3">
+			Fala morska - wbrew pozorom bardziej skomplikowany rodzaj ruchu falowego. W istocie jest to superpozycja, czyli złożenie fal poprzecznych i podłużnych. Dotyczy oczywiście cząsteczek wody zgromadzonych w zbiorniku wodnym, na przykład morzu, poddanych działaniu wiatru, lub w skrajnych przypadkach ruchów sejsmicznych.
+			<div class="themeElem">
+				<img src="imgs/fala_morska.png"/>
+			</div>
+			<div class="source">
+				Źródło: wikipedia.org
+			</div>
+		</div>
+		<div class="theme" id="fala4">
+			Fala stojąca - fala, której grzbiety i doliny nie przemieszczają się. Idealna fala stojąca taka jak przedstawiona na rysunku, to taka, której elementy, czyli węzły i strzałki pozostają w tych samych miejscach, nie przemieszczają się. Nie występuje tu propagacja drgań. Jest ona efektem interferencji dwóch fal o tym samym kierunku, ale przeciwnych zwrotach, często pomiędzy falą padającą, a odbitą. Jest wykorzystywana na przykład w pudłach rezonansowych do wzmacniania dźwięków.
+			<div class="themeElem">
+				<img src="imgs/fala_stoj.gif"/>
+			</div>
+			<div class="source">
+				Źródło: wikipedia.org
+			</div>
+		</div>
+		<div class="theme" id="fala5">
+			Fale elektromagnetyczne - zaburzenie pola elektromagnetycznego. Własności takiej fali zależą od długości fali. Najdłuższe fale, to fale radiowe, następnie mikrofale, później a skali znajduje się spektrum promieniowania widzialnego, następnie fale są coraz krótsze, przez ultrafiolet, rentgenowskie aż do promieniowania gamma. Dokładne wartości prezentuje poniższy wykres.
+			<div class="themeElem">
+				<img src="imgs/fale_elek.png"/>
+			</div>
+			<div class="source">
+				Źródło: wikipedia.org
+			</div>
+		</div>
+	</div>
+	<div id="interference">
+		<h1 class="head2">Interferencja fal</h1>
+		Bardzo ciekawym i istotnym w wykorzystaniu dla ruchu falowego zjawiskiem jest interferencja fal. Jest to powstanie nowego rozkładu amplitudy fali poprzez superpozycję dwóch lub więcej fal spójnych, czyli takich równych częstotliwościach i odpowiednio skorelowanych fazach. W praktyce wygląda to tak, że jeżeli w dwóch fala bięgnacych razem w tym samym miejsc wystąpi szczyt, uzyskamy podwójne wzmocnienie, natomiast jeśli grzbiet zejdzie się z punktem dolnego wychylenie, fale się wygaszą. Prezentuje to poniższy film.
+		<div id="vid">
+			<video width="800" height="600" controls>
+				<source src="imgs/interf.mp4" type="video/mp4">
+			Twoja przeglądarka nie wspiera wideo
+			</video>
+		</div>
+		<div class="source">
+				Źródło: physics-animations.com i youtube.com
+		</div>
+	</div>	
+	<div id="wykres">
+		<h1 class="head3">Wykresy drgań</h1>
+		Najwygodniejsze w obserwacji i analizie ruchu harmonicznego są wykresy. Poniżej zatem proste narzędzie do rysowania wykresów zależności położenia od czasu dla zadanej amplitudy i częstotliwości z możliwością dodania tłumienia (domyślnie 0). Pod wykresem symulacja pokazująca wygląd takiego ruchu na poruszającej się cząstce, oraz aktualizowane wartości energii kinetycznej i potencjalnej.
+		<div id="wykres">
+			<br><br>
+			<canvas style="border:1px solid black;" id="waveform" width="800" height="600"></canvas>
+			<br><br>
+			<div id="menu">
+				Amplituda
+				<input type="text" name="Amplituda" id="A" value="0"/>
+				Częstotliwość
+				<input type="text" name="Częstotliwość" id="C" value="0"/>
+				Tłumienie
+				<input type="text" name="Tłumienie" id="B" value="0"/>
+				<input type="submit" name="button" id="button" value="Rysuj" />
+				<input type="submit" name="clean" id="clean" value="Czyść" />
+				<div id="sim">
+					<canvas id="symulacja" width=1900 height=200></canvas>
+				</div>
+				<div id="stats">
+					Statystyki ruchu harmonicznego, energia kinetyczna i potencjalna (bez tłumienia):
+					<br>
+					<div id="energia"></div>
+					<button onclick="startWorker()">Wyświetl statystyki ruchu</button>
+					<button onclick="stopWorker()">Zatrzymaj</button>
+				</div>
+				<br><br>
+			</div>
+			<script type="text/javascript" src="form.js"></script>
+		</div>
+	</div>
+	<footer>
+		<a href="doc.html">Dokumentacja</a><br>
+		Projekt1 - Techniki Internetowe 2018/2019. Stronę wykonał Karol Rojek.
+	</footer>
+
+</body>
+</html>

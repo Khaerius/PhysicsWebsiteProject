@@ -1,0 +1,193 @@
+body
+{
+	background-color: #ffdb4d;
+	margin: 3px;
+}
+
+.head1
+{
+	background-image: url('imgs/fale.jpg');
+	width: 1897px;
+	height: 600px;
+	text-align: center;
+	font-family: "Jazz LET", fantasy;
+	font-size: 70px;
+	color: white;
+	text-shadow: 3px 3px black;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	text-align: center;
+}
+
+nav
+{
+	font-size: 40px;
+	color: yellow;
+	font-family: "Deja Vu Sans Mono", monospace;
+}
+
+nav ul
+{
+	background-color: black;
+	list-style-type: none;
+	text-align: center;
+	padding: 21px;
+}
+
+nav ul li
+{
+	display: inline;
+	padding: 20px;
+}
+
+nav ul li:hover
+{
+	background-color: #1a1a1a;
+	cursor: pointer;
+}
+
+@font-face
+{
+	font-family: "Typewriter";
+	src: url(imgs/atr.ttf) format("truetype");
+}
+
+article
+{
+	text-align: center;
+	font-family: "Typewriter", serif;
+	font-size: 18px;
+	border-bottom: 3px ridge black;
+}
+
+article h1
+{
+	text-align: center;
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.head2
+{
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.head3
+{
+	text-align: right;
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+#oscill
+{
+	font-family: "Typewriter", serif;
+	font-size: 18px;
+	border-bottom: 3px ridge black;
+}
+
+#waves
+{
+	font-family: "Typewriter", serif;
+	font-size: 18px;
+	text-align: right;
+}
+
+#wavesThemes
+{
+	list-style-type: none;
+	text-align: center;
+	font-family: "Deja Vu Sans Mono", monospace;
+}
+
+#wavesThemes li
+{
+	padding: 10px;
+	display: inline;
+	color: #404040;
+}
+
+#wavesThemes li:hover
+{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#wavesThemes li:active
+{
+	text-decoration: underline;
+}
+
+
+.theme
+{
+	display: none;
+	float: right;
+	width: 1600px;
+	text-align: center;
+}
+
+#interference
+{
+	font-family: "Typewriter", serif;
+	font-size: 18px;
+	text-align: left;
+	border-bottom: 3px ridge black;
+}
+
+#vid
+{
+	float: center;
+	text-align: center;
+	width: 800px;
+	height: 600px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;	
+
+}
+
+#wykres
+{
+	font-family: "Typewriter", serif;
+	font-size: 18px;
+	text-align: right;
+	border-bottom: 5px groove black;
+}
+
+#waveform
+{
+	padding-left: 0;
+    	padding-right: 0;
+    	margin-left: auto;
+    	margin-right: auto;
+    	display: block;
+    	width: 800px;
+	background-color: white;
+}
+
+#menu
+{
+	text-align: center;
+}
+
+.source
+{
+	text-align: right;
+	font-style: italic;
+	font-size: 11px;
+	color: darkgray;	
+}
+
+footer
+{
+	padding: 20px;
+	text-align: center;
+	font-style: italic;
+	font-size: 15px;
+}
